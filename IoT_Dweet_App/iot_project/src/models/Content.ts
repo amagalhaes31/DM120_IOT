@@ -9,9 +9,11 @@ export default class Content {
     private umidade: string = "0";
     private umidMin: string = "0";
     private umidMax: string = "0";
-
+    private current_color: string = "0";
+    private status_buzzer: string = "0";
     
-	constructor($temperatura: string , $tempMin: string , $tempMax: string , $luminosidade: string , $lumMin: string , $lumMax: string , $umidade: string , $umidMin: string , $umidMax: string ) {
+
+	constructor($temperatura: string , $tempMin: string , $tempMax: string , $luminosidade: string , $lumMin: string , $lumMax: string , $umidade: string , $umidMin: string , $umidMax: string , $current_color: string , $status_buzzer: string ) {
 		this.temperatura = $temperatura;
 		this.tempMin = $tempMin;
 		this.tempMax = $tempMax;
@@ -21,8 +23,10 @@ export default class Content {
 		this.umidade = $umidade;
 		this.umidMin = $umidMin;
 		this.umidMax = $umidMax;
-	}    
-    
+		this.current_color = $current_color;
+		this.status_buzzer = $status_buzzer;
+	}
+
 
     /**
      * Getter $temperatura
@@ -97,6 +101,22 @@ export default class Content {
 	}
 
     /**
+     * Getter $current_color
+     * @return {string }
+     */
+	public get $current_color(): string  {
+		return this.current_color;
+	}
+
+    /**
+     * Getter $status_buzzer
+     * @return {string }
+     */
+	public get $status_buzzer(): string  {
+		return this.status_buzzer;
+	}
+
+    /**
      * Setter $temperatura
      * @param {string } value
      */
@@ -168,6 +188,21 @@ export default class Content {
 		this.umidMax = value;
 	}
 
+    /**
+     * Setter $current_color
+     * @param {string } value
+     */
+	public set $current_color(value: string ) {
+		this.current_color = value;
+	}
+
+    /**
+     * Setter $status_buzzer
+     * @param {string } value
+     */
+	public set $status_buzzer(value: string ) {
+		this.status_buzzer = value;
+	}
 
    
 

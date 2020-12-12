@@ -22,11 +22,11 @@ int luminosidade = 0;
 int luminosidade_perc = 0;
 int lumiMax = 0; int lumiMin = 999;
 String current_color = "";
-bool status_buzzer = false;
+String status_buzzer = "Desabilitado";
 
 #ifndef STASSID
-#define STASSID "MagalhaesAlexandre"
-#define STAPSK  "magal2020Alexandre"
+#define STASSID "Magalhaes"
+#define STAPSK  "magal2020"
 #endif
 
 const char* ssid     = STASSID;
@@ -149,15 +149,15 @@ void ReadTempHumidity() {
   
   if (temperatura >= 30 && temperatura < 100) {
     acendeLED(255,0,0);
-    current_color = "vermelha";
+    current_color = "Vermelha";
   }
   else if (temperatura >= 10 && temperatura < 30) {
     acendeLED(0,255,0);
-    current_color = "verde";
+    current_color = "Verde";
   }
   else {
     acendeLED(0,0, 255);
-    current_color = "azul";
+    current_color = "Azul";
   }
   Serial.println("Cor: " + current_color);
   Serial.println("");
@@ -181,11 +181,11 @@ void ReadLuminosidade() {
 
   if(luminosidade_perc >= 50) {
     acionaBuzzer();
-    status_buzzer = true;
+    status_buzzer = "Habilitado";
   } else {
-    status_buzzer = false;
+    status_buzzer = "Desabilitado";
   }
-  Serial.println("Buzzer: " + String(status_buzzer)); 
+  Serial.println("Buzzer: " + status_buzzer); 
   Serial.println(""); 
 }
 

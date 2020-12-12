@@ -20,15 +20,19 @@
     </ion-card> 
     
     <div style="text-align: center;">
-      <div style = "position:relative; float: left; padding-left: 3rem;">
+      <div style = "position:relative; float: left; padding-left: 4rem;">
         Min: {{dweet._with[0].content.tempMin}} ºC
       </div>
-      <div style = "position:relative; float: right; padding-right: 3rem;">
+      <div style = "position:relative; float: right; padding-right: 4rem;">
         Max: {{dweet._with[0].content.tempMax}} ºC
       </div>
     </div>
 
-    <div style="text-align: center; margin-top: 3rem;"> 
+    <div style="text-align: center; margin-top: 3.5rem;">
+        LED: {{dweet._with[0].content.current_color}}
+    </div>
+
+    <div style="text-align: center; "> 
       <p> 
         <ion-icon name="calendar" color="primary"></ion-icon>
         {{dweet._with[0].date}}
