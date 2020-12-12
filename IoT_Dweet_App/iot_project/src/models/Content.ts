@@ -6,17 +6,22 @@ export default class Content {
     private luminosidade: string = "0";
     private lumMin: string = "0";
     private lumMax: string = "0";
+    private umidade: string = "0";
+    private umidMin: string = "0";
+    private umidMax: string = "0";
 
-
-
-	constructor($temperatura: string , $tempMin: string , $tempMax: string , $luminosidade: string , $lumMin: string , $lumMax: string ) {
+    
+	constructor($temperatura: string , $tempMin: string , $tempMax: string , $luminosidade: string , $lumMin: string , $lumMax: string , $umidade: string , $umidMin: string , $umidMax: string ) {
 		this.temperatura = $temperatura;
 		this.tempMin = $tempMin;
 		this.tempMax = $tempMax;
 		this.luminosidade = $luminosidade;
 		this.lumMin = $lumMin;
 		this.lumMax = $lumMax;
-	}
+		this.umidade = $umidade;
+		this.umidMin = $umidMin;
+		this.umidMax = $umidMax;
+	}    
     
 
     /**
@@ -68,6 +73,30 @@ export default class Content {
 	}
 
     /**
+     * Getter $umidade
+     * @return {string }
+     */
+	public get $umidade(): string  {
+		return this.umidade;
+	}
+
+    /**
+     * Getter $umidMin
+     * @return {string }
+     */
+	public get $umidMin(): string  {
+		return this.umidMin;
+	}
+
+    /**
+     * Getter $umidMax
+     * @return {string }
+     */
+	public get $umidMax(): string  {
+		return this.umidMax;
+	}
+
+    /**
      * Setter $temperatura
      * @param {string } value
      */
@@ -114,7 +143,31 @@ export default class Content {
 	public set $lumMax(value: string ) {
 		this.lumMax = value;
 	}
-    
+
+    /**
+     * Setter $umidade
+     * @param {string } value
+     */
+	public set $umidade(value: string ) {
+		this.umidade = value;
+	}
+
+    /**
+     * Setter $umidMin
+     * @param {string } value
+     */
+	public set $umidMin(value: string ) {
+		this.umidMin = value;
+	}
+
+    /**
+     * Setter $umidMax
+     * @param {string } value
+     */
+	public set $umidMax(value: string ) {
+		this.umidMax = value;
+	}
+
 
    
 
